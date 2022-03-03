@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    User-specific configuration for maven. Includes things that should not 
+    be distributed with the pom.xml file, such as developer identity, along with 
+    local settings, like proxy information. The default location for the
+    settings file is ~/.m2/settings.xml 
+-->
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <localRepository>C:/Work/Java/MavenLocalRepository/.m2/repository</localRepository>
+    <proxies>
+        <proxy>
+            <host>wwppool.local.iadb.org</host>
+            <port>9090</port>
+            <username>julianr</username>
+            <password>MyPassWord</password>
+            <id>NonAuthenticatedProxy</id>
+            <active>false</active>
+            <!--Excepciones de maquinas que no se usara proxy-->
+            
+            <nonProxyHosts>hqtaxknl01,hqpaxknl01,hqpaknl03,knlystem,kl,knowledgeandlearning,awdaknl01,awpaknl02,localhost,127.0.0.1,localaddress,.idb.iadb.org,HQDAXKNL01,HQTDBAWS01.idb.iadb.org,HQTDBAWS01,hqdabts01,hqtaknldb01,outlook.office365.com,smtp.office365.com</nonProxyHosts>
+        </proxy>
+		<proxy>
+            <host>127.0.0.1</host>
+            <port>3128</port>
+            <id>SquidLocal</id>
+            <active>false</active>
+            <!--Excepciones de maquinas que no se usara proxy-->
+            
+            <nonProxyHosts>localhost</nonProxyHosts>
+        </proxy>
+    </proxies>
+</settings>
